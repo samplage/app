@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "622491331583",
-    "firebase_url": "https://boilerplate-524bf.firebaseio.com",
-    "project_id": "boilerplate-524bf",
-    "storage_bucket": "boilerplate-524bf.appspot.com"
+    "project_number": "625487084049",
+    "firebase_url": "https://samplage-d938b.firebaseio.com",
+    "project_id": "samplage-d938b",
+    "storage_bucket": "samplage-d938b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:622491331583:android:49ce80e878df3f75",
+        "mobilesdk_app_id": "1:625487084049:android:a7dff7f1da52a122",
         "android_client_info": {
-          "package_name": "dev.kilbot.boilerplate"
+          "package_name": "com.samplage.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "622491331583-tbjtiqqm9sho09a0r7oargrqb2nlgv3m.apps.googleusercontent.com",
+          "client_id": "625487084049-uin80od6d95rpdf8ga4f1jhhch0hp5jd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB5mqaG7gLxKDpaeTtjMDJWwnpQJtGQmnw"
+          "current_key": "AIzaSyDK0dbSwEadjhHSzaQMQBbsSdkXhrb99Qg"
         }
       ],
       "services": {

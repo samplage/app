@@ -1,4 +1,4 @@
-package dev.kilbot.boilerplate;
+package com.samplage.app;
 
 import android.app.Application;
 

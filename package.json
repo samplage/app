@@ -1,8 +1,8 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.0",
+  "name": "samplage",
+  "version": "0.0.1",
   "main": "packages/web/src/index.tsx",
-  "repository": "https://github.com/kilbot/boilerplate",
+  "repository": "https://github.com/samplage/app",
   "author": "kilbot",
   "license": "MIT",
   "private": true,
@@ -11,19 +11,19 @@
       "packages/*"
     ],
     "nohoist": [
-      "@boilerplate/mobile/react-native",
-      "@boilerplate/mobile/react-native/**",
-      "@boilerplate/mobile/react-native-*",
-      "@boilerplate/mobile/react-native-*/**"
+      "@samplage/mobile/react-native",
+      "@samplage/mobile/react-native/**",
+      "@samplage/mobile/react-native-*",
+      "@samplage/mobile/react-native-*/**"
     ]
   },
   "scripts": {
-    "dev:web": "yarn workspace @boilerplate/web start",
-    "dev:desktop": "yarn workspace @boilerplate/desktop start",
-    "dev:mobile": "yarn workspace @boilerplate/mobile start",
-    "build:web": "yarn workspace @boilerplate/web build",
-    "build:desktop": "yarn workspace @boilerplate/desktop build",
-    "build:mobile": "yarn workspace @boilerplate/mobile build",
+    "dev:web": "yarn workspace @samplage/web start",
+    "dev:desktop": "yarn workspace @samplage/desktop start",
+    "dev:mobile": "yarn workspace @samplage/mobile start",
+    "build:web": "yarn workspace @samplage/web build",
+    "build:desktop": "yarn workspace @samplage/desktop build",
+    "build:mobile": "yarn workspace @samplage/mobile build",
     "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules",
     "deploy": "yarn build:web && firebase deploy"
   },
