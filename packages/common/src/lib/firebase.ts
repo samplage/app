@@ -1,10 +1,10 @@
 import React from 'react';
-import firebase from 'react-native-firebase';
+import storage from '@react-native-firebase/storage';
 
 /**
  * Context
  */
-export const FirebaseContext = React.createContext(firebase);
+// export const FirebaseContext = React.createContext(firebase);
 
 /**
  * Auth
@@ -13,4 +13,6 @@ export const FirebaseContext = React.createContext(firebase);
 // export const provider = new firebase.auth.GoogleAuthProvider();
 // export const auth = firebase.auth();
 
-export default firebase;
+// export default firebase;
+
+export default { storage };

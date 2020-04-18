@@ -1,3 +1,3 @@
 # Firebase playground
 
-[Demo](https://samplage-524bf.firebaseapp.com/)
+[Demo](https://samplage-d938b.firebaseapp.com/)
