@@ -1,5 +1,5 @@
 import firebase from '../lib/firebase';
-import 'firebase/auth';
+// import 'firebase/auth';
 
 export default class AuthService {
 	public provider: any;

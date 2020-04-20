@@ -12,6 +12,7 @@
 #import <React/RCTRootView.h>
 
 #import <Firebase.h>
+#import <RNGoogleSignin/RNGoogleSignin.h>
 
 // #if DEBUG
 // #import <FlipperKit/FlipperClient.h>
@@ -41,7 +42,10 @@
   //   InitializeFlipper(application);
   // #endif  
 
-  [FIRApp configure]; // added for firebase
+  // added for firebase
+  if ([FIRApp defaultApp] == nil) {
+    [FIRApp configure];
+  }
   
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
@@ -65,6 +69,10 @@
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options {
+  return [RNGoogleSignin application:application openURL:url options:options];
 }
 
 @end

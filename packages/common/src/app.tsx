@@ -1,13 +1,17 @@
 import React, { useState, Fragment } from 'react';
 import { View, Button, Text } from 'react-native';
 import Cats from './cats';
+import AuthService from './services/auth';
+
+const auth = new AuthService();
 
 const App = () => {
 	const [user, setUser] = useState(null);
 
 	const handleLogin = async () => {
-		// const user = await auth.login();
-		// setUser(user);
+		const user = await auth.login();
+		console.log(user);
+		setUser(user);
 	};
 
 	const handleLogout = async () => {
