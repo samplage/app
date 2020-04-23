@@ -23,7 +23,7 @@
     "web": "yarn --cwd packages/web",
     "common": "yarn --cwd packages/common",
     "clean": "yarn workspaces run clean && yarn cache clean && shx rm -rf yarn.lock && rm -rf node_modules",
-    "deploy": "yarn build:web && firebase deploy",
+    "deploy": "yarn web build && firebase deploy",
     "postinstall": "cd packages/mobile/ios && pod install"
   },
   "devDependencies": {

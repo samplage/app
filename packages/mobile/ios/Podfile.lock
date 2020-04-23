@@ -333,6 +333,11 @@ PODS:
     - React-cxxreact (= 0.63.0-rc.0)
     - React-jsi (= 0.63.0-rc.0)
   - React-jsinspector (0.63.0-rc.0)
+  - react-native-video (4.4.5):
+    - React
+    - react-native-video/Video (= 4.4.5)
+  - react-native-video/Video (4.4.5):
+    - React
   - React-RCTActionSheet (0.63.0-rc.0):
     - React-Core/RCTActionSheetHeaders (= 0.63.0-rc.0)
   - React-RCTAnimation (0.63.0-rc.0):
@@ -409,6 +414,8 @@ PODS:
   - RNGoogleSignin (4.0.0):
     - GoogleSignIn (~> 5.0.0)
     - React
+  - RNSVG (12.1.0):
+    - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -450,6 +457,7 @@ DEPENDENCIES:
   - React-jsi (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-video (from `../node_modules/react-native-video`)
   - React-RCTActionSheet (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/Libraries/Blob`)
@@ -464,6 +472,7 @@ DEPENDENCIES:
   - "RNFBAuth (from `../../../node_modules/@react-native-firebase/auth`)"
   - "RNFBStorage (from `../../../node_modules/@react-native-firebase/storage`)"
   - "RNGoogleSignin (from `../../../node_modules/@react-native-community/google-signin`)"
+  - RNSVG (from `../node_modules/react-native-svg`)
   - Yoga (from `/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -530,6 +539,8 @@ EXTERNAL SOURCES:
     :path: "/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/jsinspector"
+  react-native-video:
+    :path: "../node_modules/react-native-video"
   React-RCTActionSheet:
     :path: "/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -558,6 +569,8 @@ EXTERNAL SOURCES:
     :path: "../../../node_modules/@react-native-firebase/storage"
   RNGoogleSignin:
     :path: "../../../node_modules/@react-native-community/google-signin"
+  RNSVG:
+    :path: "../node_modules/react-native-svg"
   Yoga:
     :path: "/Users/kilbot/Projects/samplage/packages/mobile/node_modules/react-native/ReactCommon/yoga"
 
@@ -606,6 +619,7 @@ SPEC CHECKSUMS:
   React-jsi: 87b6b899f6c81c29487d0416969c261b73f46a2d
   React-jsiexecutor: 0ca3a8a0a65f9eb9aec3273c4cf44f6d31277937
   React-jsinspector: 09b8cb3fefdf81b2889a13cc1a645e905e514ddb
+  react-native-video: eee541262ada11bc7ffe8ec5508e6a877937c462
   React-RCTActionSheet: b6d2445d7317359997ed0c650421d0a0b9dd58cb
   React-RCTAnimation: 2f48bd93a4f5317cd5ab7189c6b5e469b60fb7bf
   React-RCTBlob: b8da9c90135ee183f3ad35b521313390370b5ed2
@@ -620,6 +634,7 @@ SPEC CHECKSUMS:
   RNFBAuth: c292603069a09065a1b4d3336148beff83e4c897
   RNFBStorage: 0087dec3c49fcd4c805e9455239d684d8f61a6b0
   RNGoogleSignin: 068788c1e83e5e05ef0bad090ba67fd8f963a2a3
+  RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Yoga: 5ffb724bde6d20a1828a1dc9a368085f404a1203
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

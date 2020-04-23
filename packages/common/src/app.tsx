@@ -1,22 +1,18 @@
-import React, { useState, Fragment } from 'react';
-import { View, Button, Text } from 'react-native';
-import Cats from './cats';
-import AuthService from './services/auth';
-
-const auth = new AuthService();
+import React from 'react';
+import { View } from 'react-native';
+import Logo from './components/logo';
+import firebase from './lib/firebase';
+import Player from './components/player';
 
 const App = () => {
-	const [user, setUser] = useState(null);
+	const [sampleUrl, setSampleUrl] = React.useState();
 
-	const handleLogin = async () => {
-		const user = await auth.login();
-		console.log(user);
-		setUser(user);
-	};
-
-	const handleLogout = async () => {
-		setUser(null);
-	};
+	React.useEffect(() => {
+		const sample = firebase.storage().ref('rocky_balboa-it_aint_about_how_hard_you_hit.mp3');
+		sample.getDownloadURL().then((url) => {
+			setSampleUrl(url);
+		});
+	}, []);
 
 	return (
 		<View
@@ -26,17 +22,8 @@ const App = () => {
 				flex: 1,
 			}}
 		>
-			{user ? (
-				<Fragment>
-					<Cats />
-					<Button title="Logout" onPress={handleLogout} />
-				</Fragment>
-			) : (
-				<Fragment>
-					<Text style={{ marginBottom: 20 }}>Login to see cats</Text>
-					<Button title="Login" onPress={handleLogin} />
-				</Fragment>
-			)}
+			<Logo />
+			{sampleUrl && <Player url={sampleUrl} />}
 		</View>
 	);
 };
