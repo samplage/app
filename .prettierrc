@@ -3,5 +3,13 @@
   "singleQuote": true,
   "trailingComma": "es5",
   "printWidth": 100,
-  "parser": "typescript"
+  "parser": "typescript",
+  "overrides": [
+    {
+      "files": ["*.html", "*.svg"],
+      "options": {
+        "parser":"html"
+      }
+    }
+  ]
 }
