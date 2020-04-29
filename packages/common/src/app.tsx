@@ -7,6 +7,7 @@ import Splash from './splash';
 
 const App = () => {
 	const [sampleUrl, setSampleUrl] = React.useState();
+	const [isPlaying, setIsPlaying] = React.useState();
 
 	React.useEffect(() => {
 		firebase
@@ -37,8 +38,8 @@ const App = () => {
 		>
 			<Splash />
 
-			<Logo />
-			{sampleUrl && <Player url={sampleUrl} />}
+			<Logo animate={isPlaying} />
+			{sampleUrl && <Player url={sampleUrl} onPlaying={setIsPlaying} />}
 		</View>
 	);
 };

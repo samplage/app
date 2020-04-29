@@ -2,22 +2,31 @@ import React from 'react';
 import { Button } from 'react-native';
 import Video from 'react-native-video';
 
-const Player = ({ url }) => {
+interface Props {
+	url: string;
+	onPlaying?: () => void;
+}
+
+const Player = ({ url, onPlaying }: Props) => {
 	const [paused, setPaused] = React.useState(true);
+
+	const handlePlay = () => {
+		setPaused(false);
+		onPlaying(true);
+	};
+
+	const handlePause = () => {
+		setPaused(true);
+		onPlaying(false);
+	};
 
 	return (
 		<React.Fragment>
-			<Video
-				source={{ uri: url }}
-				paused={paused}
-				onEnd={() => {
-					setPaused(true);
-				}}
-			/>
+			<Video source={{ uri: url }} paused={paused} onEnd={handlePause} />
 			{paused ? (
-				<Button title="Play" onPress={() => setPaused(false)} />
+				<Button title="Play" onPress={handlePlay} />
 			) : (
-				<Button title="Pause" onPress={() => setPaused(true)} />
+				<Button title="Pause" onPress={handlePause} />
 			)}
 		</React.Fragment>
 	);

@@ -23,7 +23,7 @@
     "react-native-video": "4.4.5"
   },
   "devDependencies": {
-    "@types/react-native": "0.62.4",
+    "@types/react-native": "0.62.5",
     "metro-react-native-babel-preset": "0.59.0"
   },
   "jest": {
