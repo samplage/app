@@ -1,5 +1,8 @@
 {
   "name": "release",
+  "engines": {
+    "node": "10"
+  },
   "scripts": {},
   "dependencies": {
     "firebase-admin": "^6.2.0",
