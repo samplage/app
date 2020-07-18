@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Platform } from 'react-native';
+import { Link } from '@react-navigation/native';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import BootSplash from 'react-native-bootsplash';
@@ -7,6 +8,7 @@ import BootSplash from 'react-native-bootsplash';
 const query = gql`
 	{
 		samples {
+			id
 			name
 			transcription
 			file
@@ -24,9 +26,9 @@ const Home = (): React.ReactElement => {
 	if (loading) return <Text>Loading...</Text>;
 	if (error) return <Text>Error :(</Text>;
 
-	return data.samples.map(({ name }) => (
-		<View>
-			<Text>{name}</Text>
+	return data.samples.map(({ id, name }) => (
+		<View key={id}>
+			<Link to="/Sample/">{name}</Link>
 		</View>
 	));
 };

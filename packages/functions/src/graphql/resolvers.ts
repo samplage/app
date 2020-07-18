@@ -12,7 +12,7 @@ const resolverFunctions = {
 	Query: {
 		async samples() {
 			const samples = await admin.firestore().collection('samples').get();
-			return samples.docs.map((sample) => sample.data()) as Sample[];
+			return samples.docs.map((sample) => ({ id: sample.id, ...sample.data() })) as Sample[];
 		},
 	},
 };

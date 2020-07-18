@@ -5,6 +5,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './pages/home';
+import Sample from './pages/sample';
 
 const client = new ApolloClient({
 	uri: 'https://us-central1-samplage-d938b.cloudfunctions.net/api/',
@@ -18,6 +19,7 @@ const App = (): React.ReactElement => {
 			<NavigationContainer>
 				<Stack.Navigator>
 					<Stack.Screen name="Home" component={Home} />
+					<Stack.Screen name="Sample" component={Sample} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		</ApolloProvider>
