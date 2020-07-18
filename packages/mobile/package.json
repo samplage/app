@@ -8,7 +8,7 @@
     "ios": "cd ios && pod install && cd ../ && react-native run-ios --simulator=\"iPad Air 2\"",
     "android": "react-native run-android",
     "tsc": "tsc",
-    "clean": "shx rm -rf ios/build&& rm -rf ios/Pods && rm -rf android/build && rm -rf node_modules && watchman watch-del-all",
+    "clean": "react-native-clean-project",
     "studio": "open -a /Applications/Android\\ Studio.app ./android/",
     "xcode": "open ios/samplage.xcworkspace"
   },
@@ -30,7 +30,8 @@
   },
   "devDependencies": {
     "@types/react-native": "0.63.1",
-    "metro-react-native-babel-preset": "0.60.0"
+    "metro-react-native-babel-preset": "0.60.0",
+    "react-native-clean-project": "^3.4.0"
   },
   "jest": {
     "preset": "react-native",

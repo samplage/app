@@ -12,7 +12,7 @@ const client = new ApolloClient({
 
 const Stack = createStackNavigator();
 
-const App = () => {
+const App = (): React.ReactElement => {
 	return (
 		<ApolloProvider client={client}>
 			<NavigationContainer>
