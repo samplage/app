@@ -4,10 +4,10 @@ import Video from 'react-native-video';
 
 interface Props {
 	url: string;
-	onPlaying?: () => void;
+	onPlaying: (arg0: boolean) => void;
 }
 
-const Player = ({ url, onPlaying }: Props) => {
+const Player = ({ url, onPlaying }: Props): React.ReactElement => {
 	const [paused, setPaused] = React.useState(true);
 
 	const handlePlay = () => {

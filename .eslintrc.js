@@ -1,7 +1,7 @@
 module.exports = {
 	parser: '@typescript-eslint/parser',
-	extends: ['plugin:@typescript-eslint/recommended', 'react-app', 'plugin:prettier/recommended'],
-	plugins: ['@typescript-eslint', 'react', 'react-native', 'react-hooks'],
+	extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+	plugins: ['@typescript-eslint', 'react-native', 'react-hooks'],
 	rules: {
 		indent: 'off',
 		'@typescript-eslint/indent': ['error', 'tab'],

@@ -13,7 +13,7 @@ const query = gql`
 	}
 `;
 
-const List = () => {
+const Home = (): React.ReactElement => {
 	const { loading, error, data } = useQuery(query);
 
 	if (loading) return <Text>Loading...</Text>;
@@ -26,4 +26,4 @@ const List = () => {
 	));
 };
 
-export default List;
+export default Home;
