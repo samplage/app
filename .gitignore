@@ -6,6 +6,7 @@ yarn-error.log
 Pods
 .firebase/
 .yarn/
+.yarnrc
 .env
 database-debug.log
 firebase-debug.log
