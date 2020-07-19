@@ -6,3 +6,8 @@ yarn-error.log
 Pods
 .firebase/
 .yarn/
+.env
+database-debug.log
+firebase-debug.log
+firestore-debug.log
+ui-debug.log

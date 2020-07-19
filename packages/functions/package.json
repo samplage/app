@@ -7,7 +7,7 @@
   "scripts": {
     "build": "parcel build src/index.ts --target node --detailed-report",
     "watch": "parcel src/index.ts --target node",
-    "serve": "npm run build && firebase serve --only functions",
+    "serve": "env-cmd npm run build && firebase serve --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",

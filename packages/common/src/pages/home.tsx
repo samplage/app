@@ -1,17 +1,16 @@
 import React from 'react';
-import { Text, View, Platform } from 'react-native';
+import { Platform, Text, View } from 'react-native';
 import { Link } from '@react-navigation/native';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import BootSplash from 'react-native-bootsplash';
+import slugify from '@sindresorhus/slugify';
 
 const query = gql`
 	{
 		samples {
 			id
 			name
-			transcription
-			file
 		}
 	}
 `;
@@ -28,7 +27,7 @@ const Home = (): React.ReactElement => {
 
 	return data.samples.map(({ id, name }) => (
 		<View key={id}>
-			<Link to="/Sample/">{name}</Link>
+			<Link to={`/sample/${slugify(name)}-${id}`}>{name}</Link>
 		</View>
 	));
 };

@@ -19,6 +19,9 @@ const schema = gql`
 	type Query {
 		"List all samples"
 		samples: [Sample]
+
+		"Get sample by ID"
+		sample(id: ID!): Sample
 	}
 `;
 

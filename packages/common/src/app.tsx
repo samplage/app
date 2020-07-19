@@ -8,15 +8,33 @@ import Home from './pages/home';
 import Sample from './pages/sample';
 
 const client = new ApolloClient({
-	uri: 'https://us-central1-samplage-d938b.cloudfunctions.net/api/',
+	uri:
+		process.env.NODE_ENV === 'production'
+			? 'https://us-central1-samplage-d938b.cloudfunctions.net/api/'
+			: 'http://localhost:5001/samplage-d938b/us-central1/api',
 });
 
 const Stack = createStackNavigator();
 
+const linking = {
+	prefixes: ['samplage://'],
+	config: {
+		screens: {
+			Home: '',
+			Sample: {
+				path: 'sample/:id?',
+				// parse: {
+				// 	id: (id) => id.split('-').pop(),
+				// },
+			},
+		},
+	},
+};
+
 const App = (): React.ReactElement => {
 	return (
 		<ApolloProvider client={client}>
-			<NavigationContainer>
+			<NavigationContainer linking={linking}>
 				<Stack.Navigator>
 					<Stack.Screen name="Home" component={Home} />
 					<Stack.Screen name="Sample" component={Sample} />
